@@ -1,0 +1,198 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.hero {
+    background-color: #222;
+    color: #fff;
+    padding: 5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.hero-headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    background-color: #64ffda;
+    color: #181818;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #4ac4b3;
+}
+
+.hero-visual {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.skills-section,
+.journey-section,
+.portfolio-section,
+.contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #eee;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.skill-group {
+    background-color: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    transform:
+    perspective(800px)
+    rotateY(0deg) scale(0.9)
+    rotateX(15deg);
+    filter: blur(0px);
+    opacity: 0.5;
+    transition: 0.7s ease all;
+
+    &:hover {
+        transform:
+            perspective(1000px)
+            rotateY(0deg)
+            translateY(-50px)
+            rotateX(-5deg)
+            scale(1.1);
+            filter: blur(0);
+            opacity: 100;
+    }
+}
+
+.skill-group h3 {
+    color: #64ffda;
+    margin-bottom: 1rem;
+}
+
+.skill-item {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    margin: 0.7rem 0;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column; /* Punkte unter dem Namen */
+    align-items: center; /* Zentriert den Namen und die Punkte */
+}
+
+.journey-timeline {
+    max-width: 800px;
+    margin: 2rem auto;
+    color: #ccc;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    color: #ccc;
+}
+
+.contact-section {
+    color: #ccc;
+}
+
+.contact-section p {
+    margin-bottom: 1rem;
+}
+
+.contact-section a {
+    color: #64ffda;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 0.1rem 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 1rem;
+        min-height: auto;
+    }
+
+    .hero-headline {
+        font-size: 2rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-group {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+#dynamic-word-container {
+    display: inline-block;
+    min-width: 230px; /* Anpassen */
+    text-align: center; /* Optional */
+    transition: width 0.1s ease-in-out; /* Sanfter Übergang der Breite */
+}
+
+#dynamic-word {
+    color: #64ffda;
+}
